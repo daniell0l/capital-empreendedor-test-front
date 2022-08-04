@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ce-test-web-app"
+    }
+  },
+  "defaultProject": "ce-test-web-app",
+  "cli": {
+    "analytics": "d763211a-df21-4a95-8b4b-bc469c198b77"
+  }
 }
