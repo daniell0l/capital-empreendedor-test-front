@@ -11,11 +11,10 @@ export class UsersComponent implements OnInit {
 
   responseUsers: ResponseUsers;
 
-  constructor(private userService: UserService) {  }
+  constructor(public userService: UserService) {  }
 
   ngOnInit(): void {
-    this.userService.getUsers()
-    .subscribe(res => this.responseUsers = res)
+    this.userService.getUsers().subscribe(res => this.responseUsers = res)
   }
 
 }

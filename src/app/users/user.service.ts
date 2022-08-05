@@ -8,11 +8,11 @@ import { ResponseUsers } from './user.model';
 })
 export class UserService {
 
-  private url = "http://localhost:3000/users"
+  private url = "http://localhost:3000/users/all"
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<ResponseUsers>{
+  public getUsers(): Observable<ResponseUsers>{
     return this.http.get<ResponseUsers>(this.url)
   }
 }
