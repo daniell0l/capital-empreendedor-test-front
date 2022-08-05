@@ -1,1 +1,23 @@
-<p>users works!</p>
+<h1>Clientes!</h1>
+
+
+<table>
+  <thead>
+    <td>Nome</td>
+    <td>Email</td>
+    <td>isActive</td>
+    <td>Phone</td>
+    <td>Revenue</td>
+    <td>AgreedTerns</td>
+  </thead>
+  <tbody>
+    <tr *ngfor="let user of responseUsers.data">
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.isActive}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.revenue}}</td>
+      <td>{{user.agreedTerns}}</td>
+    </tr>
+  </tbody>
+</table>
