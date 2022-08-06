@@ -1,16 +1,45 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
 table {
   width: 100%;
-  height: 100vh;
+}
+
+table {
+  width: 100%;
   text-align: center;
-  border-collapse: collapse;
-  border: solid #800080;
+  border: 1px solid rgb(30, 30, 30);
+  border-spacing: 1px;
+  font-family: 'auto', sans-serif;
+margin: auto;
+}
+
+table td {
+  padding: 10px;
+  background-color: solid rgb(168, 148, 148);
+  border: 1px solid rgb(30, 30, 30);
+  border-spacing: 2px;
+
 
 }
 
+thead {
+  background-color: rgb(190, 186, 186);
+  color: rgb(0, 0, 0);
+  background: linear-gradient(rgba(85, 79, 79, 0.1), rgba(0,0,0,0.5));
+
+}
+
+h1 {
+  text-align: center;
+  background-color:  rgb(212, 212, 212);
+
+}
 th, tfoot td {
-  color: white;
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
-  border: solid #800080;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(rgba(85, 79, 79, 0.1), rgba(0,0,0,0.5));
+  border: solid #f5e7e7;
 }
 
 th {
@@ -23,20 +52,20 @@ td {
 }
 
 tbody tr:nth-child(odd){
-  background: #ff33cc;
+  background: #d1d0d0;
   background-image: url("https://raw.githubusercontent.com/thecodersguilduk/semantic-html-challenge/0cb2d50173711f84d249f73a168ca410f26252ca/assets/noise.png");
 }
 
 tbody tr:nth-child(even) {
-  background: #e495e4cc;
+  background: #fffbffcc;
   background-image: url("https://raw.githubusercontent.com/thecodersguilduk/semantic-html-challenge/0cb2d50173711f84d249f73a168ca410f26252ca/assets/noise.png");
 }
 
 thead tr, tfoot tr{
-  background-image: url("https://raw.githubusercontent.com/thecodersguilduk/semantic-html-challenge/0cb2d50173711f84d249f73a168ca410f26252ca/assets/leopardskin.jpg") !important;
 }
 
 footer {
   text-align: right;
   font-family: 'Rock Salt', cursive;
 }
+

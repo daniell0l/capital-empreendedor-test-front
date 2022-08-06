@@ -1,11 +1,19 @@
 
-<nav>
-  <ul>
-    <li> <a routerLink="">Home</a> </li>
-    <li> <a routerLink="/users/create">Criar</a> </li>
-  </ul>
-</nav>
 
-<div>
-  <router-outlet></router-outlet>
-</div>
+
+        <mat-toolbar>
+          <mat-toolbar-row style="font-size: 1.5rem; height: 80px;">
+            <button routerLink="" mat-raised-button>Home<mat-icon>date_range</mat-icon></button>
+            <span class="example-spacer"></span>
+            <button routerLink="/users/create" mat-raised-button>
+              <mat-icon>add</mat-icon>Add
+            </button>
+          </mat-toolbar-row>
+        </mat-toolbar>
+
+
+
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>

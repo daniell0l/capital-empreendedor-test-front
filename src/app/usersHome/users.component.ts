@@ -3,6 +3,7 @@ import { ResponseUsers } from '../shared/model/user.model';
 import { UserService } from '../shared/service/user.service';
 
 
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -23,5 +24,6 @@ export class UsersComponent implements OnInit {
         }
         this.responseUsers = result
       })
+
   }
 }
