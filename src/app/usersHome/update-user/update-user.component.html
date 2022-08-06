@@ -1,55 +1,34 @@
-<h2>Atualizar Cliente</h2>
-
-<div>
+<mat-card>
+  <mat-card-title>Atualizar Cliente</mat-card-title>
   <form>
     <mat-form-field>
-      <mat-label>Nome</mat-label>
-      <input matInput placeholder="Nome" [(ngModel)]="request.name" >
+      <input matInput placeholder="Nome" [(ngModel)]="request.name" name="name">
     </mat-form-field>
-    <button mat-button *ngIf="request.name" matSuffix mat-icon-button aria-label="Clear" (click)="request.name">
-      <mat-icon>close</mat-icon>
-    </button>
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="request.email" name="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Telefone" [(ngModel)]="request.phone" name="phone">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Receita" [(ngModel)]="request.revenue" name="revenue">
+    </mat-form-field>
+    <label for="termos">
+      Aceita osTermos:
+      <input type="checkbox" name="Aceita os termos" id="termos" [(ngModel)]="request.agreedTerms">
+    </label>
+    <label for="status">
+      Status:
+      <input type="checkbox" name="Status" [(ngModel)]="request.isActive">
+    </label>
   </form>
-  <mat-form-field>
-    <mat-label>Status</mat-label>
-    <mat-slide-toggle [(ngModel)]="request.isActive"></mat-slide-toggle>
-  </mat-form-field>
-</div>
-
-
-<div *ngIf="request">
-  <label for="nome">
-  </label>
-  <br>
-  <label for="email">
-    Email:
-    <input type="email" [(ngModel)]="request.email">
-  </label>
-  <br>
-
-  <label for="telefone">
-    Telefone:
-    <input type="text" [(ngModel)]="request.phone">
-  </label>
-  <br>
-  <label for="receita">
-    Receita:
-    <input type="number" name="" id="" [(ngModel)]="request.revenue">
-  </label>
-  <br>
-  <label for="termos">
-    Termos:
-    <input type="checkbox" name="termos" id="termos" [(ngModel)]="request.agreedTerms">
-  </label>
-  <label for="status">
-    Status:
-
-  </label>
-  <br>
 
   <button (click)="update()" mat-raised-button>Update</button>
   <button (click)="delete()" mat-raised-button routerLink="/users/update/{{id}}">Deletar</button>
 
+</mat-card>]
+
+<div>
   <table mat-table [(dataSource)]="opportunities" class="mat-elevation-z8">
 
     <ng-container matColumnDef="nome">

@@ -1,4 +1,15 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 table {
   width: 100%;
 }
 
+button {
+  margin-left: 550px;
+  margin-top: 20px;
+  text-align: center;
+  width: 200px;
+}

@@ -4,7 +4,6 @@ import { RequestUpdate } from 'src/app/shared/model/user.model';
 import { UserService } from 'src/app/shared/service/user.service';
 import { OpportunityService } from 'src/app/shared/service/opportunity.service'
 import { Opportunity } from 'src/app/shared/model/opportunity.model';
-import {FormControl} from '@angular/forms';
 @Component({
   selector: 'app-update-user',
   templateUrl: './update-user.component.html',
