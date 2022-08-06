@@ -9,14 +9,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { UserListComponent } from './usersHome/user-list/user-list.component';
 import {MatTableModule} from '@angular/material/table';
+import { CreateUserComponent } from './usersHome/create-user/create-user.component';
+import { FormsModule } from '@angular/forms';
+import { UpdateUserComponent } from './usersHome/update-user/update-user.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    UserListComponent
+    CreateUserComponent,
+    UpdateUserComponent,
+
   ],
   imports: [
     HttpClientModule,
@@ -26,7 +31,8 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

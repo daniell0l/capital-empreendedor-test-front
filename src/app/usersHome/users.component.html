@@ -1,8 +1,38 @@
-<mat-toolbar>
-  <mat-toolbar-row style="font-size: 1.5rem;">
-    <span>Clientes<mat-icon>date_range</mat-icon></span>
-    <span class="example-spacer"></span>
-    <button mat-raised-button><mat-icon>add</mat-icon>Cliente</button>
-  </mat-toolbar-row>
-</mat-toolbar>
-<app-user-list></app-user-list>
+<h1>Usuários</h1>
+
+<table *ngIf="responseUsers">
+  <thead>
+    <!--Table Row 1-->
+    <tr>
+      <td>Nome</td>
+      <td>Email</td>
+      <td>Telefone</td>
+      <td>Receita</td>
+      <td>Termos</td>
+      <td>Status</td>
+      <td>...</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of responseUsers.data">
+
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.revenue}}</td>
+      <td>{{user.agreedTerms}}</td>
+      <td>{{user.isActive}}</td>
+      <td><a routerLink="/users/update/{{user.email}}">Editar</a></td>
+    </tr>
+
+
+
+  <tfoot>
+    <!--Table Footer-->
+    <tr>
+
+      <td colspan="8">By Daniel</td>
+    </tr>
+  </tfoot>
+</table>

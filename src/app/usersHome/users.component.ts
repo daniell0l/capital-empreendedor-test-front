@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponseUsers } from './user.model';
-import { UserService } from './user.service';
+import { ResponseUsers } from '../shared/model/user.model';
+import { UserService } from '../shared/service/user.service';
+
 
 @Component({
   selector: 'app-users',
@@ -10,11 +11,17 @@ import { UserService } from './user.service';
 export class UsersComponent implements OnInit {
 
   responseUsers: ResponseUsers;
-
-  constructor(public userService: UserService) {  }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(res => this.responseUsers = res)
-  }
 
+
+    this.userService.getUsers()
+      .subscribe(res => {
+        const result = {
+          data: Object.values(res)
+        }
+        this.responseUsers = result
+      })
+  }
 }
