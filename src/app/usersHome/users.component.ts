@@ -12,10 +12,11 @@ import { UserService } from '../shared/service/user.service';
 export class UsersComponent implements OnInit {
 
   responseUsers: ResponseUsers;
+  displayedColumns: string[] = ['nome', 'email', 'telefone', 'receita', 'termos', 'status'];
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-
 
     this.userService.getUsers()
       .subscribe(res => {
@@ -24,6 +25,5 @@ export class UsersComponent implements OnInit {
         }
         this.responseUsers = result
       })
-
   }
 }

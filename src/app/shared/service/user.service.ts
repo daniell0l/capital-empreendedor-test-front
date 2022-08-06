@@ -39,4 +39,5 @@ export class UserService {
     const _url = `${this.url2}/${id}`
     return this.http.delete<any>(_url);
   }
+
 }

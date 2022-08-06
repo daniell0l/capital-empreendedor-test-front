@@ -1,45 +1,42 @@
-<h2>create user</h2>
+<!-- <h2>Novo Cliente</h2> -->
 
-<div>
-  <label for="nome">
-    Name: <input type="text" [(ngModel)]="request.name">
-  </label>
-  <br>
-  <label for="email">
-    Email:
-    <input type="email" [(ngModel)]="request.email">
-  </label>
-  <br>
+<mat-card>
+  <mat-card-title>Novo Cliente</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="request.name" name="name" >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="request.email" name="email" >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Telefone" [(ngModel)]="request.phone" name="phone" >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Receita" [(ngModel)]="request.revenue" name="revenue" >
+    </mat-form-field>
+    <label for="termos">
+      Aceita osTermos:
+      <input type="checkbox" name="Aceita os termos" id="termos" [(ngModel)]="request.agreedTerms">
+    </label>
+    <label for="status">
+      Status:
+      <input type="checkbox" name="Status" [(ngModel)]="request.isActive">
+    </label>
 
-  <label for="telefone" >
-    Telefone:
-    <input type="text" [(ngModel)]="request.phone">
-  </label>
-  <br>
-  <label for="receita">
-    Receita:
-    <input type="number" name="" id="" [(ngModel)]="request.revenue">
-  </label>
-  <br>
-  <label for="termos">
-    Termos:
-    <input type="checkbox" name="termos" id="termos" [(ngModel)]="request.agreedTerms">
-  </label>
-  <label for="status">
-    Status:
-    <input type="checkbox" [(ngModel)]="request.isActive">
-  </label>
-  <br>
+  </form>
+  <button mat-raised-button (click)="save()">Salvar</button>
 
-  <button (click)="save()">Gravar</button>
 
-</div>
 
-<div className="" *ngIf="response">
-  <label>Nome: {{response.name}}</label>
-  <label>Email: {{response.email}}</label>
-  <label>Phone: {{response.phone}}</label>
-  <label>Receita: {{response.revenue}}</label>
-  <label>Termos: {{response.agreedTerms}}</label>
-  <label>Status: {{response.isActive}}</label>
-</div>
+  <div className="" *ngIf="response">
+    <label>Nome: {{response.name}}</label>
+    <label>Email: {{response.email}}</label>
+    <label>Phone: {{response.phone}}</label>
+    <label>Receita: {{response.revenue}}</label>
+    <label>Termos: {{response.agreedTerms}}</label>
+    <label>Status: {{response.isActive}}</label>
+  </div>
+</mat-card>
+
+
