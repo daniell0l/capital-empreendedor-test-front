@@ -4,7 +4,6 @@ import { CreateUserComponent } from './usersHome/create-user/create-user.compone
 import { UpdateUserComponent } from './usersHome/update-user/update-user.component';
 import { UsersComponent } from './usersHome/users.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +18,6 @@ const routes: Routes = [
     component: UpdateUserComponent
   }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

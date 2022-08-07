@@ -21,11 +21,9 @@
       Status:
       <input type="checkbox" name="Status" [(ngModel)]="request.isActive">
     </label>
-
   </form>
+
   <button mat-raised-button (click)="save()">Salvar</button>
-
-
 
   <div className="" *ngIf="response">
     <label>Nome: {{response.name}}</label>

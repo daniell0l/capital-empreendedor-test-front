@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestCreate, ResponseCreate } from 'src/app/shared/model/user.model';
 import { UserService } from 'src/app/shared/service/user.service';
-
 @Component({
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',

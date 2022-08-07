@@ -1,4 +1,3 @@
-
 export interface User {
   name: string;
   email: string;
@@ -7,13 +6,9 @@ export interface User {
   revenue: number;
   agreedTerms: boolean;
 }
-
 export interface ResponseUsers {
   data: User[];
 }
-
-/* Create */
-
 export interface RequestCreate {
   name: string;
   email: string;
@@ -22,7 +17,6 @@ export interface RequestCreate {
   revenue: number;
   agreedTerms: boolean;
 }
-
 export interface ResponseCreate {
   name: string;
   email: string;
@@ -31,8 +25,6 @@ export interface ResponseCreate {
   revenue: number;
   agreedTerms: boolean;
 }
-/* Buscar  */
-
 export interface ResponseUser {
   name: string;
   email: string;
@@ -41,9 +33,6 @@ export interface ResponseUser {
   revenue: number;
   agreedTerms: boolean;
 }
-
-/* editar */
-
 export interface RequestUpdate {
   name: string;
   email: string;
@@ -52,7 +41,6 @@ export interface RequestUpdate {
   revenue: number;
   agreedTerms: boolean;
 }
-
 export interface ResponseUpdate {
   name: string;
   email: string;

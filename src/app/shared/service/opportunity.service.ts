@@ -2,13 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Opportunity } from '../model/opportunity.model';
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class OpportunityService {
 
-  private url = "http://localhost:3000/opportunities";
+  private readonly url = "http://localhost:3000/opportunities";
 
   httOptions = {
     headers: new HttpHeaders({
