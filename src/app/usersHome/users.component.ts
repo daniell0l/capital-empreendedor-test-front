@@ -42,7 +42,6 @@ export class UsersComponent implements OnInit {
   }
 
   deleteElement(element: any) {
-    console.log(element);
     this.userService.deleteUser(element).subscribe(res => {
       this.loadData();
       alert('Deletado com sucesso!');
