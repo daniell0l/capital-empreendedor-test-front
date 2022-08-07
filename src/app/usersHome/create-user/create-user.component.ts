@@ -24,10 +24,10 @@ export class CreateUserComponent implements OnInit {
 
   ngOnInit(): void {
   }
-save() {
-  console.log(this.request)
-this.userService.createUser(this.request).subscribe( res => {
-this.response = res;
-})
-}
+
+  save() {
+    this.userService.createUser(this.request).subscribe(res => {
+      this.response = res;
+    })
+  }
 }
