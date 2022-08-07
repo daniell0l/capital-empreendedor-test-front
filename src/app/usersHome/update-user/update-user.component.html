@@ -1,5 +1,6 @@
 <mat-card>
   <mat-card-title>Atualizar Cliente</mat-card-title>
+
   <form *ngIf="request">
     <mat-form-field>
       <input matInput placeholder="Nome" [(ngModel)]="request.name" name="name">
@@ -26,10 +27,10 @@
   <button (click)="update()" mat-raised-button>Update</button>
   <button mat-raised-button routerLink="/">Voltar</button>
 
-</mat-card>]
+</mat-card>
+<br/>
 
 <div>
-  <mat-card>
   <table mat-table [(dataSource)]="opportunities" class="mat-elevation-z8">
 
     <ng-container matColumnDef="nome">
@@ -55,12 +56,11 @@
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef> Status </th>
       <td mat-cell *matCellDef="let element">
-        <mat-slide-toggle [(ngModel)]="element.isActive"></mat-slide-toggle>
+        <mat-slide-toggle color="primary" [(ngModel)]="element.isActive"></mat-slide-toggle>
       </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-</mat-card>
 </div>

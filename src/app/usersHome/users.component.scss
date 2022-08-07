@@ -1,5 +1,14 @@
+div {
+  display: flex;
+  justify-content: center;
+}
+
 table {
-  width: 100%;
+  width: 95%;
+}
+
+td, th {
+  text-align: center !important;
 }
 
 button {
