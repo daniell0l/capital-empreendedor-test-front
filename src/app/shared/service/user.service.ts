@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ResponseCreate, ResponseUpdate, ResponseUser, ResponseUsers } from '../model/user.model';
+import { RequestUpdate, ResponseCreate, ResponseUpdate, ResponseUser, ResponseUsers } from '../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,7 @@ export class UserService {
     const _url = `${this.url2}/${id}`
     return this.http.get<ResponseUser>(_url)
   }
-  updateUser(id: string, request: ResponseUpdate): Observable<ResponseUpdate> {
+  updateUser(id: string, request: RequestUpdate): Observable<ResponseUpdate> {
     const _url = `${this.url2}/${id}`
     return this.http.put<ResponseUpdate>(_url, request);
   }

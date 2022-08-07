@@ -29,29 +29,30 @@
 </mat-card>]
 
 <div>
+  <mat-card>
   <table mat-table [(dataSource)]="opportunities" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="nome">
+    <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Nome </th>
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="limite">
+    <ng-container matColumnDef="limit">
       <th mat-header-cell *matHeaderCellDef> Limite </th>
       <td mat-cell *matCellDef="let element"> {{element.limit}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="interesse">
+    <ng-container matColumnDef="interest">
       <th mat-header-cell *matHeaderCellDef> Interesse </th>
       <td mat-cell *matCellDef="let element"> {{element.interest}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="termo">
-      <th mat-header-cell *matHeaderCellDef> Termo </th>
+    <ng-container matColumnDef="term">
+      <th mat-header-cell *matHeaderCellDef> Termos </th>
       <td mat-cell *matCellDef="let element"> {{element.term}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="status">
+    <ng-container matColumnDef="isActive">
       <th mat-header-cell *matHeaderCellDef> Status </th>
       <td mat-cell *matCellDef="let element">
         <mat-slide-toggle [(ngModel)]="element.isActive"></mat-slide-toggle>
@@ -61,5 +62,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
+</mat-card>
 </div>

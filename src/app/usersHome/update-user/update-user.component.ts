@@ -14,7 +14,7 @@ export class UpdateUserComponent implements OnInit {
   id: string;
   request: RequestUpdate;
   opportunities: Opportunity[];
-  displayedColumns: string[] = ['nome', 'limite', 'interesse', 'termo', 'status' ];
+  displayedColumns: string[] = ['nome', 'limite', 'interesse', 'termo', 'status'];
 
   constructor(
     private userService: UserService,

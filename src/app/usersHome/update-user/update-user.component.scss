@@ -3,13 +3,16 @@ form {
   flex-direction: column;
 }
 
-table {
-  width: 100%;
-}
-
 button {
-  margin-left: 550px;
   margin-top: 20px;
+  margin-left: 10px;
   text-align: center;
   width: 200px;
+  background-color: rgb(208, 228, 228);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
 }

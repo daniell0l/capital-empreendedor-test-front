@@ -39,7 +39,7 @@ import {MatCardModule} from '@angular/material/card';
     MatSlideToggleModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
 
   ],
   providers: [],

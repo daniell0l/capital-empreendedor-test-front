@@ -3,7 +3,7 @@
 <button routerLink="/users/create" mat-raised-button>
   <mat-icon>add</mat-icon>Add
 </button>
-<button routerLink="/users/update" mat-raised-button>
+<button routerLink="/users/update/:id" mat-raised-button>
   <mat-icon>edith</mat-icon>Editar
 </button>
 
@@ -45,6 +45,6 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
 </div>
+
 
