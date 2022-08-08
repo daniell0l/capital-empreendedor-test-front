@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ResponseUsers } from '../shared/model/user.model';
+import { DialogService } from '../shared/service/dialog.service';
 import { UserService } from '../shared/service/user.service';
 interface dataForm {
   position: number;
@@ -22,7 +24,11 @@ export class UsersComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'nome', 'email', 'telefone', 'receita', 'termos', 'status', 'actions'];
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService,
+    public dialog: MatDialog,
+    private dialogService: DialogService
+  ) { }
 
   ngOnInit(): void {
     this.loadData()
@@ -41,10 +47,14 @@ export class UsersComponent implements OnInit {
       })
   }
 
-  deleteElement(element: any) {
-    this.userService.deleteUser(element).subscribe(res => {
-      this.loadData();
-      alert('Deletado com sucesso!');
-    })
+  confirm(id: string) {
+    this.dialogService.openConfirmDialog('Tem Certeza que deseja excluir')
+      .afterClosed().subscribe(res => {
+        if (res) {
+          this.userService.deleteUser(id).subscribe(res => {
+            this.loadData()
+          })
+        }
+      });
   }
 }

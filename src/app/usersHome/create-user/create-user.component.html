@@ -15,7 +15,7 @@
     </mat-form-field>
     <label for="termos">
       Aceita osTermos:
-      <input type="checkbox" name="Aceita os termos" id="termos" [(ngModel)]="request.agreedTerms">
+      <input type="checkbox" name="Aceita os termos" id="request.termos" [(ngModel)]="request.agreedTerms">
     </label>
     <label for="status">
       Status:
@@ -24,6 +24,7 @@
   </form>
 
   <button mat-raised-button (click)="save()">Salvar</button>
+  <button mat-raised-button (click)="exit()">Voltar</button>
 
   <div className="" *ngIf="response">
     <label>Nome: {{response.name}}</label>

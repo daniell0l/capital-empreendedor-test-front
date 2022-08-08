@@ -34,4 +34,8 @@ export class CreateUserComponent implements OnInit {
       this.rota.navigate(['/'])
     })
   }
+
+  exit() {
+    this.rota.navigate(['/'])
+  }
 }

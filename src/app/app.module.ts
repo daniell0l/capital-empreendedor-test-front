@@ -17,6 +17,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
+import { UserFormDialogComponent } from './usersHome/user-form-dialog/user-form-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import {MatCardModule} from '@angular/material/card';
     UsersComponent,
     CreateUserComponent,
     UpdateUserComponent,
+    UserFormDialogComponent,
 
   ],
   imports: [
@@ -40,9 +45,12 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
+    MatPaginatorModule,
+    MatDialogModule
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[UserFormDialogComponent],
 })
 export class AppModule { }
