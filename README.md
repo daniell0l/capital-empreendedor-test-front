@@ -1,7 +1,11 @@
 
 #  🧪 Minhas alterações
 
-## * Front-end:
+- Front-end:
+  - adicionei o material 
+  - usei a tabela do material, os botões e o matCard
+  - Utilizei tbm o matPaginator e o matDialog do material
+
   # 🛸 Tecnologias
 
 * Angular
