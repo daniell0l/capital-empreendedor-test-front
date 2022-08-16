@@ -1,27 +1,58 @@
-# CE Test - Web App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+#  🧪 Minhas alterações
 
-## Development server
+## * Front-end:
+  # 🛸 Tecnologias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Angular
 
-## Code scaffolding
+* SCSS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* HTML
 
-## Build
+* Typescript
+# ⚙️ como utilizar
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1 - Clonar e rodar o repositório do back-end, aqui tem o passo a passo:
 
-## Running unit tests
+```bash
+ https://github.com/daniell0l/capitalEmpreendedorBack
+```
+2 - clone e abrir em seu VScode o repositorio:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ https://github.com/daniell0l/capital-empreendedor-test-front.git
+```
 
-## Running end-to-end tests
+3 - instale as dependências:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```bash
+ yarn
+ ```
 
-## Further help
+4 - Rode a aplicação:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+ yarn start
+```
+
+4 -  Acesse a aplicação no seu navegador em
+* `http://localhost:4200` para visualizar a tabela dos clientes
+
+5 - Para visualizar as oportunidades de um cliente:
+
+```bash
+No campo de ações clique no lapis, voce consegui editar o cliente e ver as oportunidades dele
+```
+
+6 - Caso queira adicionar um novo cliente:
+
+```bash
+Clique no botão de Add, lá tem todos os capos necessário para adicionar um novo
+```
+
+7 - Para excluir um cliente:
+```bash
+Vai em Ações e clica na lixeira 
+```
+    

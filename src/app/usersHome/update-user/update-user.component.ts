@@ -43,7 +43,6 @@ export class UpdateUserComponent implements OnInit {
         this.opportunityService.update(this.id, this.opportunities).subscribe(res => {
           this.rota.navigate(['/']);
         })
-
       })
       alert('Atualizado com sucesso!')
     } catch (error) {
