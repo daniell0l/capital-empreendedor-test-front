@@ -46,7 +46,7 @@
 5 - Para visualizar as oportunidades de um cliente:
 
 ```bash
-No campo de ações clique no lapis, voce consegui editar o cliente e ver as oportunidades dele
+Em ações clique no lapis, você consegui editar o cliente e ver as oportunidades dele
 ```
 
 6 - Caso queira adicionar um novo cliente:
